@@ -1,0 +1,9 @@
+button.sendButton{
+    color: #66FCF1;
+    background-color: transparent ;
+    border-color:#66FCF1;
+}
+.sendButton:hover{
+    background-color: #66FCF1;
+    color: #1F2833;
+}

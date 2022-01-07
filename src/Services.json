@@ -1,0 +1,74 @@
+[
+    {
+        "name": "Netflix",
+        "image": "/images/Streaming Icons/NetflixIcon.png"
+    },
+    {
+        "name": "Disney+",
+        "image": "/images/Streaming Icons/DisneyPlusIcon.png"
+    },
+    {
+        "name": "Amazon Prime",
+        "image": "/images/Streaming Icons/AmazonPrimeIcon.png"
+    },
+    {
+        "name": "Hulu",
+        "image": "/images/Streaming Icons/HuluIcon.jpg"
+    },
+    {
+        "name": "Crave",
+        "image": "/images/Streaming Icons/CraveIcon.png"
+    },
+    {
+        "name": "iTunes",
+        "image": "/images/Streaming Icons/iTunesIcon.png"
+    },
+    {
+        "name": "Google Play",
+        "image": "/images/Streaming Icons/GooglePlayIcon.png"
+    },
+    {
+        "name": "HBO Max",
+        "image": "/images/Streaming Icons/HBOMaxIcon.png"
+    },
+    {
+        "name": "Apple TV+",
+        "image": "/images/Streaming Icons/AppleTVPlus.jpg"
+    },
+    {
+        "name": "Peacock",
+        "image": "/images/Streaming Icons/PeacockIcon.png"
+    },
+    {
+        "name": "Showtime",
+        "image": "/images/Streaming Icons/ShowtimeIcon.png"
+    },
+    {
+        "name": "Paramount+",
+        "image": "/images/Streaming Icons/ParamountPlusIcon.jpg"
+    },
+    {
+        "name": "BritBox",
+        "image": "/images/Streaming Icons/BritBoxIcon.png"
+    },
+    {
+        "name": "Starz",
+        "image": "/images/Streaming Icons/StarzIcon.png"
+    },
+    {
+        "name": "Mubi",
+        "image": "/images/Streaming Icons/MubiIcon.jpg"
+    },
+    {
+        "name": "Stan",
+        "image": "/images/Streaming Icons/StanIcon.png"
+    },
+    {
+        "name": "Now",
+        "image": "/images/Streaming Icons/NowIcon.png"
+    },
+    {
+        "name": " Youtube Premium",
+        "image": "/images/Streaming Icons/YoutubePremiumIcon.png"
+    }
+]

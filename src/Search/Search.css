@@ -1,0 +1,60 @@
+
+body { 
+    background-color: #1F2833 ;
+  }
+
+.menu-flags{
+    width: 80px;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.supportedServices{
+  padding-top: 10px;
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-bottom: 20px;
+}
+
+.tool {
+  position: relative;
+  display: inline-block;
+  padding-top: 10px;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  max-width: 85px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  opacity: 80%;
+  left: 25%;
+
+}
+
+div.tool:hover .tooltiptext {
+  visibility: visible;
+}
+
+button.searchButton{
+  height:44px; 
+  max-width:200px; 
+  z-index:0 !important;
+  color:#66FCF1;
+  border-color:#66FCF1 !important;
+}
+
+.searchButton:hover{
+  background-color: #66FCF1;
+  color: #1F2833;
+}
