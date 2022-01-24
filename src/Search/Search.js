@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './Search.css';
 import 'jquery';
 import { useState } from "react";
-import SearchListGen from './SearchListGen';
+import SearchResults from './SearchResults';
 import toast, { Toaster } from 'react-hot-toast';
 import StreamingServices from '../Services.json'
 
@@ -33,9 +33,15 @@ const Search = () => {
             .then (response => response.json())
             .then(response => {
                 if (response.Response === "True"){
+                    console.log(response);
                     setList(response);
                 }
                 else{
+                    const res = {
+                        Search: [],
+                        totalResults: 0
+                    }
+                    setList(res);
                     toast.error("Sorry we were unabe to find the Movie/TV Show you were looking for.") 
                 }
             })
@@ -125,10 +131,10 @@ const Search = () => {
                     <div className="row justify-content-center">
                         <div className="col-sm-6">
                             <div className="btn-group" >
-                            <button type="button" className={buttonState("1")} onClick={() =>{pageNav(searchVal,1)}} style={{marginLeft:"1px", marginRight:"1px"}} id="1" key="1">1</button>
-                                {buttons.map((butt) => (
-                                    <button type="button" className={buttonState(butt.id)} onClick={() =>{pageNav(searchVal,butt.id)}} style={{marginLeft:"1px", marginRight:"1px"}} id={butt.id} key={butt.id}>{butt.id}</button>
-                                ))}
+                            <button type="button" className={buttonState("1")} onClick={() =>{pageNav(searchVal,1)}} id="1" key="1">1</button>
+                            {buttons.map((butt) => (
+                                <button type="button" className={buttonState(butt.id)} onClick={() =>{pageNav(searchVal,butt.id)}} id={butt.id} key={butt.id}>{butt.id}</button>
+                            ))}
                             </div>
                         </div>
                     </div>
@@ -152,10 +158,10 @@ const Search = () => {
 
     const buttonState = (id) =>{
         if (pageNum ===id){
-            return ("btn btn-outline-primary active");
+            return ("btn btn-outline-primary pageSelectButton active");
         }
         else{
-            return("btn btn-outline-primary");
+            return("btn btn-outline-primary pageSelectButton");
         }
     }
 
@@ -165,7 +171,7 @@ const Search = () => {
             StreamingServices.map((cont) => (
                 <div className="col-sm-2 tool" key={i++}>
                     <div className="row">
-                        <img src={cont.image}  alt={cont.name + " logo"} className="mx-auto d-block" style={{maxWidth:"100px", height:"auto", borderRadius:"25%"}}></img>
+                        <img src={cont.image}  alt={cont.name + " logo"} className="mx-auto d-block streamingService"></img>
                         <span className='tooltiptext'>{cont.name}</span>
                     </div>
                 </div>
@@ -185,12 +191,12 @@ const Search = () => {
                     <div ref={myRef} className="col-sm-6">
                     <div className="input-group">
                         <form className="input-group" onSubmit={saveInput}>
-                            <select className="input-group-prepend form-select"  id="countrySearched" defaultValue="ca" style={{height:"44px",maxWidth:"160px", backgroundColor:"#ebeef2"}}>
+                            <select className="input-group-prepend form-select searchCountryDropdown"  id="countrySearched" defaultValue="ca">
                                 <option value="ca">Canada</option>
                                 <option value="us">United States</option>
                             </select>
-                            <input type="text" id="searchTerm" className="form-control rounded input-group" placeholder="Search for Movie or TV Show by Title" aria-label="Search" 
-                                aria-describedby="search-addon" style={{height:"44px",minWidth:"180px", zIndex:"0"}}/>
+                            <input type="text" id="searchTerm" className="form-control rounded input-group searchBar" placeholder="Search for Movie or TV Show by Title" aria-label="Search" 
+                                aria-describedby="search-addon"/>
                             <button className="input-group-append btn btn-outline-primary border border-primary border-3 searchButton"><b>Search</b></button>
                         </form>
                     </div>
@@ -208,7 +214,7 @@ const Search = () => {
                             </div>
                         </div>
                         <div className="row">
-                            <SearchListGen contentList={contentList} country={country}/>
+                            <SearchResults contentList={contentList} country={country}/>
                         </div>
                         <br/>
                         <br/>

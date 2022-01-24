@@ -1,0 +1,23 @@
+h3, u{
+    color: #66FCF1;
+}
+body{
+    color: white;
+}
+.streamingLogos{
+    max-width: 100px;
+    max-height: 100px; 
+    height: 100%;
+    width:100%;
+    border-radius: 25%;
+}
+div.streamingLogoPadding{
+    padding-top: 6px;
+}
+.aboutText{
+    font-size: 20px; 
+    text-align: left;
+}
+div.servicesContainer{
+    padding-top: 25px;
+}

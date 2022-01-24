@@ -1,5 +1,6 @@
 
 import 'bootstrap/dist/css/bootstrap.css';
+import './About.css'
 import streamingServices from "../Services.json";
 
 const About = () => {
@@ -8,9 +9,9 @@ const About = () => {
         var i=0;
         return(
             streamingServices.map((cont) => (
-                <div className="col-sm-2" key={i++} style={{paddingTop: "6px"}}>
+                <div className="col-sm-2 streamingLogoPadding" key={i++}>
                     <div className="row">
-                        <img src={cont.image}  className="mx-auto d-block" style={{maxWidth:"100px", height:"auto", borderRadius:"25%"}}></img>
+                        <img src={cont.image}  className="mx-auto d-block streamingLogos"></img>
                     </div>
                     <div className="row justify-content-center">
                         {cont.name}
@@ -21,13 +22,13 @@ const About = () => {
     
 
     return ( 
-        <div className="container-md" style={{color: "white"}}>
+        <div className="container-md">
             <br/>
             <div className = "row">
                 <h1>About Pipestream</h1>
             </div>
             <br/>
-            <div className="row" style={{fontSize:"20px", textAlign:"left"}}>
+            <div className="row aboutText">
                 <u><h3>What is Pipestream?</h3></u>
                 <p><b>Pipestream is a search engine that allows you to find the location of your favorite movies in one quick search!</b> In addition, we also provide information on the movies/TV shows you search, which vary from ratings, to that actors that star in them.</p>
                 <u><h3>How does our tool work?</h3></u>
@@ -36,7 +37,7 @@ const About = () => {
                 <u><h3>What services does our search engine support?</h3></u>
                 <p>Based on your location, our search engine will support a variation of the following streaming services:
                 <br/> 
-                <div className="row" style={{paddingTop:"25px"}}>
+                <div className="row servicesContainer">
                     {listServices()}
                 </div>
                 </p>

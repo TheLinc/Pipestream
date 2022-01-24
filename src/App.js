@@ -1,5 +1,5 @@
 import './App.css';
-import Navbar from './Navbar';
+import Navbar from './Navbar/Navbar';
 import Home from './Home/Home';
 import firebase from 'firebase';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';

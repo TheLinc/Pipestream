@@ -479,23 +479,23 @@ class ContentProfile extends Component{
                                         reverseOrder={false}
                                     />
                                     <div className="row justify-content-center">
-                                        <div className="col-sm-10" style={{backgroundColor:"rgba(0,0,0, 0.7)", borderRadius: "15px"}}>
+                                        <div className="col-sm-10 detailsContainer">
                                         <br/>
                                         <div className="row justify-content-between">
                                             <div className="col-2">
-                                                <button type="button" onClick={()=>{goBack()}} style={{maxWidth:"80px", maxHeight:"40px", backgroundColor:"grey", borderColor:"grey"}} className="justify-content-start btn btn-primary">Back</button>
+                                                <button type="button" onClick={()=>{goBack()}} className="justify-content-start btn btn-primary backButton">Back</button>
                                             </div>
                                             <div className="col-3 ">
                                                 <div className='row'>
                                                     <div className="col">
                                                         <Popup className="my-popup" trigger={<button type="button" className="btn btn-default contentButton">
-                                                            <i className="bi bi-plus-lg" style={{color:"white", paddingRight:"2px"}}></i></button>}>
+                                                            <i className="bi bi-plus-lg buttonIcon"></i></button>}>
                                                             <AddStreamingServicePopup id={id}/>
                                                         </Popup>
                                                     </div>
                                                     <div className="col">
                                                         <Popup className="my-popup" trigger={<button type="button" className="btn btn-default contentButton">
-                                                            <i className="bi bi-exclamation-triangle" style={{color:"white"}}></i></button>}>
+                                                            <i className="bi bi-exclamation-triangle buttonIcon"></i></button>}>
                                                             <ReportProblemPopup id={id}/>
                                                         </Popup>
                                                     </div>
@@ -508,13 +508,13 @@ class ContentProfile extends Component{
                                                 <div className="row">
                                                     <div className="col-sm-3">
                                                         <div className="row justify-content-center ">
-                                                            <img src={dependent2.Poster} alt="Content Poster" style={{height:"245px", width:"auto", paddingBottom:"10px"}}></img>
+                                                            <img src={dependent2.Poster} alt="Content Poster" className="poster"></img>
                                                         </div>
                                                         <div className="row" style={{display:"inline-block"}}>
                                                             <div className="d-inline p-1">
                                                                 {dependent2.Year}
                                                             </div>
-                                                            <div className="d-inline p-1" style={{borderStyle:"solid", borderRadius:"4px", borderColor:"grey", fontSize:"12px"}}>
+                                                            <div className="d-inline p-1 rating">
                                                                 {dependent2.Rated}
                                                             </div>
                                                             <div className="d-inline p-1">
@@ -539,7 +539,7 @@ class ContentProfile extends Component{
                                                         <div className="row">
                                                             <div className="row " >
                                                                 <b><u><p>Ratings:</p></u></b>
-                                                                <div style={{display:"inline-block"}}>
+                                                                <div className="qualityRating">
                                                                     {getRatings(dependent2.Ratings)}
                                                                 </div>
                                                             </div>
@@ -552,7 +552,6 @@ class ContentProfile extends Component{
                                                             <br/>
                                                             <br/>
                                                             <div className="row">
-                                                                {console.log("Location print out: ",dependent1)}
                                                                 {getServices(dependent1, id)}
                                                             </div>
                                                         </div>
