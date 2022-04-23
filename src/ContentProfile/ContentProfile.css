@@ -88,4 +88,7 @@ img.poster{
 .qualityRating{
   display: inline-block;
 }
+div.popupText{
+  color: black;
+}
 

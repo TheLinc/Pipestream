@@ -23,11 +23,11 @@ const Search = () => {
     const bulkSearch =(title, page)=>{
         if (title !== ""){
             pageNum=page;
-            fetch("https://movie-database-imdb-alternative.p.rapidapi.com/?s="+title+"&page="+page+"&r=json", {
+            fetch("https://movie-database-alternative.p.rapidapi.com/?s="+title+"&page="+page+"&r=json", {
 	            "method": "GET",
 	            "headers": {
-		            "x-rapidapi-key": process.env.REACT_APP_SA_API_KEY,
-		            "x-rapidapi-host": "movie-database-imdb-alternative.p.rapidapi.com"
+		            "x-rapidapi-key": process.env.REACT_APP_MDB_API_KEY,
+		            "x-rapidapi-host": "movie-database-alternative.p.rapidapi.com"
 	            }
             })
             .then (response => response.json())
@@ -195,7 +195,7 @@ const Search = () => {
                                 <option value="ca">Canada</option>
                                 <option value="us">United States</option>
                             </select>
-                            <input type="text" id="searchTerm" className="form-control rounded input-group searchBar" placeholder="Search for Movie or TV Show by Title" aria-label="Search" 
+                            <input type="text" id="searchTerm" className="form-control rounded input-group searchBar" placeholder="Search for Movie or TV Show by title" aria-label="Search" 
                                 aria-describedby="search-addon"/>
                             <button className="input-group-append btn btn-outline-primary border border-primary border-3 searchButton"><b>Search</b></button>
                         </form>

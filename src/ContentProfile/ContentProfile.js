@@ -272,13 +272,13 @@ class ContentProfile extends Component{
 
             if (!(await Ref.get()).exists){
                 console.log("Collecting movie details from API...");
-                const response = await fetch("https://movie-database-imdb-alternative.p.rapidapi.com/?i="+itemID+"&r=json", {
-                    "method": "GET",
-                    "headers": {
-                        "x-rapidapi-key": process.env.REACT_APP_MDB_API_KEY,
-                        "x-rapidapi-host": "movie-database-imdb-alternative.p.rapidapi.com"
-                    }
-                    });
+                    const response = await fetch("https://movie-database-alternative.p.rapidapi.com/?i="+itemID+"&r=json", {
+                        "method": "GET",
+                        "headers": {
+                            "x-rapidapi-key": process.env.REACT_APP_MDB_API_KEY,
+                            "x-rapidapi-host": "movie-database-alternative.p.rapidapi.com"
+                        }
+                        });
                 const MovieDB = await response.json();
                 console.log("MovieDB Response: ", MovieDB);
                 
@@ -470,7 +470,7 @@ class ContentProfile extends Component{
             if ((dependent1[0] !== "none") && (dependent2 !== '') && contentExists){
                 return(
                     <div>
-                        <div style={{backgroundImage: `url(${getBackground(dependent2.Background)})`, backgroundSize:"cover", height:"700px", backgroundPosition:"center", color:"white"}}>
+                        <div style={{backgroundImage: `url(${getBackground(dependent2.Background)})`, backgroundSize:"cover", height:"100vh", backgroundPosition:"center", color:"white"}}>
                             <br/>
                             <div>
                                 <div className="container-md">

@@ -1,6 +1,7 @@
 import streamingServices from '../Services.json' 
 import emailjs from 'emailjs-com';
 import toast from 'react-hot-toast';
+import './ContentProfile.css';
 
 const AddStreamingServicePopup = (props) => {
     const id = props.id;
@@ -35,7 +36,7 @@ const AddStreamingServicePopup = (props) => {
     }
 
     return ( 
-        <div>
+        <div className="popupText">
             <div>Found this content on a streaming site that is not listed?</div>
             <div>Help us improve your user experience by submitting a form so we can fix it!</div>
             <br/>
